@@ -1,76 +1,75 @@
 /*All Elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /* body */
 body {
-    min-height: 100vh;
-    background: #efeff2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  background: #0909f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 /*The whole of the calculatore */
-.Calculator{ 
-    width: 500px;
-    height: 600px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background: #22252D;
-    overflow: hidden;
+.Calculator {
+  width: 500px;
+  height: 600px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: #22252d;
+  overflow: hidden;
 }
 
 /*The Text box and screen */
-form input{
-    width: 100%;
-    height: 150px;
-    border: none;
-    border-radius: 12px;
-    font-size: 2rem;
-    padding: 1rem;
-    color: white;
-    background: black;
-    text-align: right;
-    pointer-events: none;
+form input {
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  padding: 1rem;
+  color: white;
+  background: black;
+  text-align: right;
+  pointer-events: none;
 }
 
 /*All Buttons */
-.buttons{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
 /*All Buttons Individually   */
-button{
-    flex: 0 0 22%;
-    margin: 5px 0;
-    border: 1px solid green;
-    width: 60px;
-    height: 52px;
-    font-size: 30px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
+button {
+  flex: 0 0 22%;
+  margin: 5px 0;
+  border: 1px solid green;
+  width: 60px;
+  height: 52px;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.btn-yellow{
-    background: orange;
-    color:greenyellow;
+.btn-yellow {
+  background: orange;
+  color: greenyellow;
 }
 
-.btn-grey{
-    background: lightgray;
+.btn-grey {
+  background: lightgray;
 }
 
-.btn-equal{
-    background: green;
+.btn-equal {
+  background: green;
 }
 
-.btn-clear{
-    background: red;
+.btn-clear {
+  background: red;
 }
