@@ -36,6 +36,7 @@ The value of the button is added to the screen element's value attribute, which 
         }
       });
 
+      
     clearB.addEventListener('click', function(e){
     
             screen.value = "";
