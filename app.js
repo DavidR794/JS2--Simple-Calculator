@@ -37,6 +37,7 @@ The value of the button is added to the screen element's value attribute, which 
       });
 
     //When clear button is clicked , the screen value will be set to an empty field. Meaning the input field is cleared of any text.
+    //If you click on the clear button then update the screen value with an empty string!
     clearB.addEventListener('click', function(e){
     
             screen.value = "";
