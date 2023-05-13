@@ -1,10 +1,13 @@
+/* NOTE '.button' = means its taking it from the class on html
+if there is not '.' then its not using a class e.g.'form input'*/
+
 /*All Elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* body */
+/* body - whole background of the webapp */
 body {
   min-height: 100vh;
   background: #0909f0;
@@ -13,7 +16,7 @@ body {
   align-items: center;
 }
 
-/*The whole of the calculatore */
+/*The whole of the calculator */
 .Calculator {
   width: 500px;
   height: 600px;
@@ -31,8 +34,8 @@ form input {
   border-radius: 12px;
   font-size: 2rem;
   padding: 1rem;
-  color: white;
-  background: black;
+  color: white; /*screen text color*/
+  background: black; /*screen background*/
   text-align: right;
   pointer-events: none;
 }
@@ -42,7 +45,7 @@ form input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
 }
 /*All Buttons Individually   */
 button {
@@ -57,14 +60,15 @@ button {
   cursor: pointer;
 }
 
+/*btn-yellow = class been used for all buttons except the equal and clear*/
 .btn-yellow {
   background: orange;
   color: greenyellow;
 }
 
-.btn-grey {
-  background: lightgray;
-}
+/* .btn-grey {
+  background: purple;
+} */
 
 .btn-equal {
   background: green;

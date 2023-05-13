@@ -2,8 +2,9 @@
 //Steps2> functions/classes.....Event Listeners
 
 //Intialise......
+
 /*select the HTML elements that represent the calculator, 
-the screen, all buttons and equal, clear buttons.
+the screen, all buttons and equal, clear buttons which need to be functional.
 */
 
     let screen = document.querySelector('.screen');
@@ -13,10 +14,20 @@ the screen, all buttons and equal, clear buttons.
   
 //Event Listeners.....
 
-/* All buttons looped with forEach() method
-Event listener waits for button to be clicked
-The clicked buttons data-num attribute is set to the value. e.g. 5=data-num 5
-The value of the button is added to the screen element's value attribute, which displays the value of the button on the calculator screen.
+/* 
+'   buttons.forEach(function(button){: ' 
+This line starts a loop that iterates over each button element in the buttons collection or array.
+
+'  button.addEventListener('click', function(e){: '  
+
+This line adds an event listener to each button for the 'click' event. It specifies that when a button is clicked, a function will be executed.
+The addEventListener method is used to attach an event listener to an individual element, not to a collection of elements and thats why this 'button' is not 'buttons'
+
+'let value = e.target.dataset.num;:  '
+This line retrieves the value of the data-num attribute from the button that was clicked. The e.target represents the button element that triggered the event, and dataset.num retrieves the value of the data-num attribute from that button.
+
+'screen.value += value;:'
+ This line updates the value of the screen element. It appends the value obtained from the data-num attribute of the clicked button to the current value displayed on the screen.
 */
     buttons.forEach(function(button){
       button.addEventListener('click', function(e){
