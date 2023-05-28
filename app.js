@@ -7,13 +7,37 @@
 the screen, all buttons and equal, clear buttons which need to be functional.
 */
 
-    let screen = document.querySelector('.screen');
-    let buttons = document.querySelectorAll('.btn');
-    let equalB = document.querySelector('.btn-equal'); 
-    let clearB = document.querySelector('.btn-clear');
-  
+let screen = document.querySelector(".screen");
+let buttons = document.querySelectorAll(".btn");
+let equalB = document.querySelector(".btn-equal");
+let clearB = document.querySelector(".btn-clear");
+
 //Event Listeners.....
 
+buttons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    let value = e.target.dataset.num;
+    screen.value += value;
+  });
+});
+
+//equals button clicked , if empty asks please enter, else evaluate whats on the screen and call it result and then update the screen value with the result.
+equalB.addEventListener("click", function (e) {
+  if (screen.value === "") {
+    screen.value = "Please enter";
+  } else {
+    let result = eval(screen.value);
+    screen.value = result;
+  }
+});
+
+//When clear button is clicked , the screen value will be set to an empty field. Meaning the input field is cleared of any text.
+//If you click on the clear button then update the screen value with an empty string!
+clearB.addEventListener("click", function (e) {
+  screen.value = "";
+});
+
+//EXTRA INFO
 /* 
 '   buttons.forEach(function(button){: ' 
 This line starts a loop that iterates over each button element in the buttons collection or array.
@@ -29,29 +53,3 @@ This line retrieves the value of the data-num attribute from the button that was
 'screen.value += value;:'
  This line updates the value of the screen element. It appends the value obtained from the data-num attribute of the clicked button to the current value displayed on the screen.
 */
-    buttons.forEach(function(button){
-      button.addEventListener('click', function(e){
-        let value = e.target.dataset.num;
-        screen.value += value;
-      })
-    });
-
-
-    //equals button clicked , if empty asks please enter, else evaluate whats on the screen and call it result and then update the screen value with the result.
-    equalB.addEventListener('click', function(e){
-        if(screen.value === ''){
-          screen.value = "Please enter";
-        } else {
-          let result = eval(screen.value);
-          screen.value = result;
-        }
-      });
-
-    //When clear button is clicked , the screen value will be set to an empty field. Meaning the input field is cleared of any text.
-    //If you click on the clear button then update the screen value with an empty string!
-    clearB.addEventListener('click', function(e){
-    
-            screen.value = "";
-        });
-
-
