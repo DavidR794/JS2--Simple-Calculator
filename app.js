@@ -12,7 +12,7 @@ let buttons = document.querySelectorAll(".btn");
 let equalB = document.querySelector(".btn-equal");
 let clearB = document.querySelector(".btn-clear");
 
-//Event Listeners.....
+//Event Listeners.........
 
 buttons.forEach(function (button) {
   button.addEventListener("click", function (e) {
