@@ -1,7 +1,7 @@
 //Steps1> inputs/imports/libraries...Initialize
 //Steps2> functions/classes.....Event Listeners
 
-//Intialise......
+//VARIABLE DECLARATIONS...........................................
 
 /*select the HTML elements that represent the calculator, 
 the screen, all buttons and equal, clear buttons which need to be functional.
@@ -11,6 +11,8 @@ let screen = document.querySelector(".screen");
 let buttons = document.querySelectorAll(".btn");
 let equalB = document.querySelector(".btn-equal");
 let clearB = document.querySelector(".btn-clear");
+
+//FUNCTION DEFINITIONS................................................
 
 //Event Listeners.........
 
@@ -52,4 +54,7 @@ This line retrieves the value of the data-num attribute from the button that was
 
 'screen.value += value;:'
  This line updates the value of the screen element. It appends the value obtained from the data-num attribute of the clicked button to the current value displayed on the screen.
-*/
+
+ screen.value === ""  STRICTLY checks if the value of the screen variable (presumably an input element's value) is an empty string.
+
+ */
